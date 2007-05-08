@@ -1,7 +1,7 @@
 %define module  Regexp-Common
 %define	name	perl-%{module}
 %define	version	2.120
-%define	release	1mdk
+%define	release	%mkrel 2
 %define	pdir	Regexp
 
 Summary:	%{module} module for perl
@@ -26,6 +26,8 @@ expressions.
 %build
 CFLAGS="$RPM_OPT_FLAGS" %{__perl} Makefile.PL INSTALLDIRS=vendor
 make
+
+%check
 make test
 
 %install
@@ -39,5 +41,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README TODO
 %{_mandir}/man*/*
-%{_libdir}/perl5/vendor_perl/*/Regexp
+%{perl_vendorlib}/*
 
