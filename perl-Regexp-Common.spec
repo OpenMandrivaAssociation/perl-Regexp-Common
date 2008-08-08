@@ -1,7 +1,7 @@
 %define module  Regexp-Common
 %define	name	perl-%{module}
 %define	version	2.122
-%define	release	%mkrel 1
+%define	release	%mkrel 2
 %define	pdir	Regexp
 
 Summary:	%{module} module for perl
