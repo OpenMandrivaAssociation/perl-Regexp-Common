@@ -1,27 +1,25 @@
-%define module  Regexp-Common
-%define	name	perl-%{module}
-%define	version	2.122
-%define	release	%mkrel 2
-%define	pdir	Regexp
+%define upstream_name    Regexp-Common
+%define	upstream_version 2.122
 
-Summary:	%{module} module for perl
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-License:	GPL or Artistic
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 2
+
+Summary:	%{upstream_name} module for perl
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/search?dist=%{module}
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Regexp/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	perl-devel 
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
-%{module} module for perl provides commonly requested regular
+%{upstream_name} module for perl provides commonly requested regular
 expressions.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 CFLAGS="$RPM_OPT_FLAGS" %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -42,4 +40,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc README TODO
 %{_mandir}/man*/*
 %{perl_vendorlib}/*
-
