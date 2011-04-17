@@ -1,5 +1,5 @@
 %define upstream_name    Regexp-Common
-%define upstream_version 2010010201
+%define upstream_version 2011041602
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
