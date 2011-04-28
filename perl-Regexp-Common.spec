@@ -1,9 +1,9 @@
 %define upstream_name    Regexp-Common
-%define upstream_version 2011041602
+%define upstream_version 2011041701
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:	%{upstream_name} module for perl
 License:	GPL+ or Artistic
