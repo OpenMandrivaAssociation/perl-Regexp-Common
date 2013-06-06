@@ -1,15 +1,15 @@
 %define upstream_name    Regexp-Common
-%define upstream_version 2011041701
+%define upstream_version 2013031301
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	%perl_convert_version 2013031301
+Release:	1
 
 Summary:	%{upstream_name} module for perl
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}/
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Regexp/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Regexp/Regexp-Common-2013031301.tar.gz
 
 BuildRequires:	perl-devel
 BuildArch:	noarch
@@ -105,4 +105,5 @@ make test
 * Wed Jun 04 2003 Lenny Cartier <lenny@mandrakesoft.com> 2.113-1mdk
 - from Peter Chen <petechen@netilla.com> :
 	- Initial packaging.
+
 
