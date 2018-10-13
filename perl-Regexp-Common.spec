@@ -12,6 +12,7 @@ Url:		http://search.cpan.org/dist/%{upstream_name}/
 Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Regexp/Regexp-Common-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
+BuildRequires:	perl(Test::More)
 BuildArch:	noarch
 
 %description
